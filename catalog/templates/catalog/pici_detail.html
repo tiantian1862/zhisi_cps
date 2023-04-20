@@ -1,0 +1,18 @@
+{% extends "home.html" %}
+
+{% block content %}
+  <h1>批次号: {{ pici_data.picihao }}</h1>
+  <p><strong>品牌:</strong> {{ pici_data.pinpai }}</p> <!-- author detail link not yet defined -->
+  <p><strong>生产时间:</strong> {{ pici_data.shengchan_date }}</p>
+  <p><strong>松散重量:</strong> {{ pici_data.kaibao_weight }}</p>
+  <p><strong>松散水分:</strong> {{ pici_data.songsan_shuifen_value }}</p>
+  <p><strong>松散温度:</strong> {{ pici_data.songsan_wendu_value}}</p>
+  <p><strong>松散率:</strong> {{ pici_data.songsan_rate }}</p>
+  <p><strong>加料重量:</strong> {{ pici_data.jialiao_weight }}</p>
+  <p><strong>加料水分:</strong> {{ pici_data.jialiao_shuifen_value }}</p>
+  <p><strong>加料温度:</strong> {{ pici_data.jialiao_wendu_value}}</p>
+  <p><strong>加料精度:</strong> {{ pici_data.jialiao_jingdu }}</p>
+  <p><strong>进柜时间:</strong> {{ pici_data.jingui_kaishi_time }}</p>
+  <p><strong>出柜时间:</strong> {{ pici_data.jingui_jieshu_time }}</p>
+  <p><strong>储柜编号:</strong> {{ pici_data.chugui_bianhao}}</p>
+{% endblock %}

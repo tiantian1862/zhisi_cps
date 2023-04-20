@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>CPS</title>
+    <link rel="stylesheet" href="../../static/css/DaoHangLan.css">
+</head>
+<body>
+<!--内容开始-->
+<div id="wk">
+    <!--Logo-->
+    <div id="con-f">
+        <img src="" alt="">
+    </div>
+    <!--第二部分-->
+    <div id="con-s">
+        <a href="{% url 'index' %}" id="home">首页</a>
+        <a href="{% url 'pici_data_list' %}" class="cons-a ">批次报告</a>
+        <a href="" class="cons-a ">设备分析</a>
+        <a href="" class="cons-a ">成本分析</a>
+        <a href="" class="cons-a ">生产调度</a>
+        <a href="/admin" class="cons-a ">后台管理</a>
+       
+    </div>
+    <!--搜索框-->
+</div>
+{% block content %}{% endblock %}
+
+</body>
+</html>
