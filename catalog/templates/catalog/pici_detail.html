@@ -1,18 +1,66 @@
 {% extends "home.html" %}
 
 {% block content %}
-  <h1>批次号: {{ pici_data.picihao }}</h1>
-  <p><strong>品牌:</strong> {{ pici_data.pinpai }}</p> <!-- author detail link not yet defined -->
-  <p><strong>生产时间:</strong> {{ pici_data.shengchan_date }}</p>
-  <p><strong>松散重量:</strong> {{ pici_data.kaibao_weight }}</p>
-  <p><strong>松散水分:</strong> {{ pici_data.songsan_shuifen_value }}</p>
-  <p><strong>松散温度:</strong> {{ pici_data.songsan_wendu_value}}</p>
-  <p><strong>松散率:</strong> {{ pici_data.songsan_rate }}</p>
-  <p><strong>加料重量:</strong> {{ pici_data.jialiao_weight }}</p>
-  <p><strong>加料水分:</strong> {{ pici_data.jialiao_shuifen_value }}</p>
-  <p><strong>加料温度:</strong> {{ pici_data.jialiao_wendu_value}}</p>
-  <p><strong>加料精度:</strong> {{ pici_data.jialiao_jingdu }}</p>
-  <p><strong>进柜时间:</strong> {{ pici_data.jingui_kaishi_time }}</p>
-  <p><strong>出柜时间:</strong> {{ pici_data.jingui_jieshu_time }}</p>
-  <p><strong>储柜编号:</strong> {{ pici_data.chugui_bianhao}}</p>
+
+<head>
+	<meta charset="utf-8"> 
+	<title>批次信息</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div>
+  <table class="table table-hover">
+    <caption>批次数据</caption>
+    <thead>
+      <tr>
+        <th>批次号</th>
+        <th>品牌</th>
+        <th>生产日期</th>
+        <th>是否完成</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ pici_data.picihao }}</td>
+        <td>{{ pici_data.pinpai }}</td>
+        <td>{{ pici_data.shengchan_date }}</td>
+        <td>是</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-hover">
+    <caption>质量数据</caption>
+    <thead>
+      <tr>
+        <th>工序</th>
+        <th>开始时间</th>
+        <th>结束时间</th>
+        <th>投料重量</th>
+        <th>出口水分</th>
+        <th>出口温度</th>
+        <th>进柜编号</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>回潮段</td>
+        <td>{{ pici_data.songsan_up_time }}</td>
+        <td>{{ pici_data.songsan_down_time }}</td>
+        <td>{{ pici_data.songsan_weight }}</td>
+        <td>{{ pici_data.songsan_shuifen_value }}</td>
+        <td>{{ pici_data.songsan_wendu_value }}</td>
+      </tr>
+      <tr>
+        <td>加料段</td>
+        <td>{{ pici_data.jialiao_up_time }}</td>
+        <td>{{ pici_data.jialiao_down_time }}</td>
+        <td>{{ pici_data.jialiao_weight }}</td>
+        <td>{{ pici_data.jialiao_shuifen_value }}</td>
+        <td>{{ pici_data.jialiao_wendu_value }}</td>
+        <td>{{ 2号柜 }}</td>
+      </tr>
+    </tbody>
+    
+  </table>
 {% endblock %}

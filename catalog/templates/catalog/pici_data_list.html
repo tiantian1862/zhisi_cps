@@ -1,20 +1,28 @@
 {% extends "home.html" %}
-
+<link href="../../static/css/bootstrap.min.css" rel="stylesheet">
 {% block content %}
     <h1>批次报告列表</h1>
-
-    {% if pici_data_list %}
-    <ul>
-
-      {% for pici_data in pici_data_list %}
-      <li>
-        <a href="{{ pici_data.get_pici_url }}">{{ pici_data.picihao }}</a> ({{pici_data.pinpai}})
-      </li>
-      {% endfor %}
-
-    </ul>
-
-    {% else %}
-      <p>没有生产信息.</p>
-    {% endif %}       
+    <div class="container">
+      <div class = "col-6"></div>
+      <div class = "col-6">
+        {% if pici_data_list %}
+        <ul>
+    
+          {% for pici_data in pici_data_list %}
+          <li>
+            <a href="{{ pici_data.get_pici_url }}">{{ pici_data.picihao }}</a> ({{pici_data.pinpai}})
+          </li>
+          {% endfor %}
+    
+        </ul>
+    
+        {% else %}
+          <p>没有生产信息.</p>
+        {% endif %} 
+      </div>
+      <div class = "col-6"></div>
+    </div>
+ 
+  
+         
 {% endblock %}
