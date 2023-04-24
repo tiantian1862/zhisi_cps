@@ -1,48 +1,32 @@
+
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
     <title>CPS</title>
-    <link href="../../static/ui/layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/DaoHangLan.css">
+    <link rel="stylesheet" href="../../../static/css/pici_data_list.css" />
 </head>
 <body>
-
-<ul class="layui-nav layui-bg-blue" lay-filter="">
-    <li class="layui-nav-item"><a href="{% url 'index' %}">首页</a></li>
-    <li class="layui-nav-item layui-this"><a href="{% url 'pici_data_list' %}">批次报告</a></li>
-    <li class="layui-nav-item"><a href="">生产调度</a></li>
-    <li class="layui-nav-item">
-        <a href="javascript:;">成本分析</a>
-        <dl class="layui-nav-child"> <!-- 二级菜单 -->
-            <dd><a href="">模块1</a></dd>
-            <dd><a href="">模块2</a></dd>
-            <dd><a href="">模块3</a></dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item"><a href="/admin">后台管理</a></li>
-</ul>
+<!--内容开始-->
+<div id="wk">
+    <!--Logo-->
+    <div id="con-f">
+        <img src="" alt="">
+    </div>
+    <!--第二部分-->
+    <div id="con-s">
+        <a href="{% url 'index' %}" id="home">首页</a>
+        <a href="{% url 'pici_data_list' %}" class="cons-a ">批次报告</a>
+        <a href="" class="cons-a ">设备分析</a>
+        <a href="" class="cons-a ">成本分析</a>
+        <a href="" class="cons-a ">生产调度</a>
+        <a href="/admin" class="cons-a ">后台管理</a>
        
-<script>
-      //注意：导航 依赖 element 模块，否则无法进行功能性操作
-layui.use('element', function(){
-    var element = layui.element;
-        
-        //…
-});
-</script>
-
+    </div>
+    <!--搜索框-->
+</div>
 {% block content %}{% endblock %}
 
-<script src="../../static/ui/layui/layui.js"></script>
-    <script>
-    // 使用组件
-    layui.use(['layer', 'form'], function(){
-      var layer = layui.layer;
-      var form = layui.form;
-      
-      // 欢迎语
-      //layer.msg('Hello World');
-    });
-    </script> 
 </body>
 </html>

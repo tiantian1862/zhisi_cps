@@ -89,8 +89,29 @@ class pici_data_list_view(generic.ListView):
     model = pici_data
     paginate_by = 10
 
+    #时间倒序，过滤数据
+    def get_queryset(self):
+        return pici_data.objects.order_by('shengchan_date')
+
+class pici_data_list_baisha_view(generic.ListView):
+    model = pici_data
+    paginate_by = 10
+
+    #时间倒序，过滤数据
+    def get_queryset(self):
+        return pici_data.objects.filter(pinpai = '白沙').order_by('shengchan_date')
+
+class pici_data_list_gengxian_view(generic.ListView):
+    model = pici_data
+    paginate_by = 10
+
+    #时间倒序，过滤数据
+    def get_queryset(self):
+        return pici_data.objects.filter(pinpai = '梗线').order_by('shengchan_date')
+
 #class pici_detail_view(generic.DateDetailView):
 #    model = pici_data
+
 def pici_detail_view(request,pk):
     pici_id=pici_data.objects.get(pk=pk)
     #book_id=get_object_or_404(Book, pk=pk)
