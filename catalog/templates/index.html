@@ -75,8 +75,8 @@
         <div class="no">
           <div class="no-hd">
             <ul>
-              <li>25000</li>
-              <li>23490</li>
+              <li>{{ data_8 }}</li>
+              <li>{{ data_9 }}</li>
             </ul>
           </div>
           <div class="no-bd">
@@ -113,7 +113,15 @@
         </div>
       </div>
     </section>
-
+    <script>
+      var data_1 = {{data_1|safe}};
+      var data_2 = {{data_2|safe}};
+      var data_3 = {{data_3|safe}};
+      var data_4 = {{data_4|safe}};
+      var data_5 = {{data_5|safe}};
+      var data_6 = {{data_6|safe}};
+      var data_7 = {{data_7|safe}};
+    </script>
     <script src="../../static/js/flexible.js"></script>
     <script src="../../static/js/echarts.min.js"></script>
     <script src="../../static/js/jquery.js"></script>

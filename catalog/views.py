@@ -1,26 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,HttpResponse
 from .models import pici_data
 # Create your views here.
 
 from django.shortcuts import get_object_or_404
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect,JsonResponse
 from django.urls import reverse
 import datetime
 from django.contrib.auth.decorators import login_required, permission_required
-
+from django.template import Template
 # from .forms import RenewBookForm
 
-
+import json
 @login_required()
 def index(request):
-    """View function for home page of site."""
-    # Generate counts of some of the main objects
-
-     #Render the HTML template index.html with the data in the context variable.
-    return render(
-        request,
-        'index.html'
-    )
+    data_1 = [9,19,29,39,49,59]
+    data_2 = [100, 8, 1200, 50, 0]
+    data_3 = [100, 100, 100, 100, 100]
+    data_4 =  [ [24, 40, 101, 134, 90, 230, 210, 230, 120, 230, 210, 120],
+                [40, 64, 191, 324, 290, 330, 310, 213, 180, 200, 180, 79]
+              ]
+    data_5 =  [ [123, 175, 112, 197, 121, 67, 98, 21, 43, 64, 76, 38],
+                [143, 131, 165, 123, 178, 21, 82, 64, 43, 60, 19, 34]
+              ]
+    data_6 =  [30, 40, 30, 40, 30, 40, 30, 60, 20, 40, 30, 40, 30, 40, 30, 40, 30, 60, 20, 40, 30, 40, 30, 40, 30, 40, 20, 60, 50, 40]
+    data_7 =  [130, 10, 20, 40, 30, 40, 80, 60, 20, 40, 90, 40, 20, 140, 30, 40, 130, 20, 20, 40, 80, 70, 30, 40, 30, 120, 20, 99, 50, 20]
+    data_8 = 30348
+    data_9 = 34235
+    return render(request, 'index.html',{'data_1':data_1,'data_2':data_2,'data_3':data_3,'data_4':data_4,'data_5':data_5,'data_6':data_6,'data_7':data_7,'data_8':data_8,'data_9':data_9})
 
 def more_cps(request):
     return render(request,'home.html')
