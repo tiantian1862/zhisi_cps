@@ -386,7 +386,7 @@
       }
     }],
     series: [{
-        name: '白沙效率指数',
+        name: '白沙工时',
         type: 'line',
         smooth: true, // 圆滑的线
         // 单独修改当前线条的样式
@@ -430,7 +430,7 @@
         data:data_6
       },
       {
-        name: "芙蓉王效率指数",
+        name: "芙蓉王工时",
         type: "line",
         smooth: true,
         lineStyle: {
