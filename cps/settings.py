@@ -81,7 +81,16 @@ WSGI_APPLICATION = 'cps.wsgi.application'
 #       'NAME': BASE_DIR / 'db.sqlite3',
 #   }
 #}
-DATABASES = {
+
+
+#select_sql
+#mysql:0
+#db.sqlite3:1
+#sqlserver：2
+select_sql = 0
+
+if select_sql == 0:
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'jixiao',
@@ -92,6 +101,21 @@ DATABASES = {
     }
 }
 
+if select_sql == 1:
+    DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+    
+if select_sql == 2:
+    DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
