@@ -93,7 +93,7 @@ if select_sql == 0:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'jixiao',
+        'NAME': 'cps',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
