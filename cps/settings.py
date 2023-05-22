@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'cps.wsgi.application'
 #mysql:0
 #db.sqlite3:1
 #sqlserver：2
-select_sql = 2
+select_sql = 1
 
 if select_sql == 0:
     DATABASES = {

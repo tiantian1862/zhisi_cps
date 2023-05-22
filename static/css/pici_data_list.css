@@ -1,0 +1,55 @@
+.main{
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 30px;
+}
+
+.leftbox{
+  width: 1000px;
+  height: 100%;
+  float: left;
+  
+}
+.charts1{
+  width: 1000px;
+  height: 300px;
+}
+.charts2{
+  width: 1000px;
+  height:300px;
+}
+.charts3{
+  width: 1000px;
+  height:250px;
+}
+.rightbox{
+  width: 800px;
+  height: 100%;
+  float: right;
+  
+}
+
+.table_pici_data{
+  font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+
+.table_pici_data th{
+  border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+
+.table_pici_data td{
+  border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
