@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-wea5fefvoodd#xefs*4fq4$lkx6iv4o!*xem-_5*m2_za7$$$x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'cps.wsgi.application'
 #mysql:0
 #db.sqlite3:1
 #sqlserver：2
-select_sql = 0
+select_sql = 2
 
 if select_sql == 0:
     DATABASES = {
@@ -111,9 +111,18 @@ if select_sql == 1:
     
 if select_sql == 2:
     DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': BASE_DIR / 'db.sqlite3',
+    'default': {
+        'ENGINE': 'mssql',
+        'NAME': 'cps',
+        'USER': 'sa',
+        'PASSWORD': 'sa@123',
+        'HOST': '10.159.208.23',
+        'PORT': '1433',
+        'OPTIONS': {
+            #'DRIVER': 'SQL Server Native Client 11.0',
+            'DRIVER': 'ODBC Driver 17 for SQL Server',
+            'MARS_Connection': True,
+        }
     }
 }
 
