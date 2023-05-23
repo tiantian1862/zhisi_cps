@@ -3,7 +3,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>批次报告</title>
-
+    {% load static %}
+    
   </head>
   <!--导航栏-->
   {% block content %}
@@ -66,13 +67,10 @@
         </div>
       </div>
     </div>
-    
-
-  <script src="../../../static/js/flexible.js"></script>
-  <script src="../../../static/js/echarts.min.js"></script>
-  <script src="../../../static/js/jquery.js"></script>
-  <!-- 引入china.js 完成地图模块 -->
-  <script src="../../static/js/china.js"></script>
-  <script src="../../../static/js/pici_data_list.js"></script>
+  
+  <script type="text/javascript" charset="utf8" src="{% static 'js/flexible.js' %}"></script>
+  <script type="text/javascript" charset="utf8" src="{% static 'js/echarts.min.js' %}"></script>
+  <script type="text/javascript" charset="utf8" src="{% static 'js/jquery.js' %}"></script>
+  <script type="text/javascript" charset="utf8" src="{% static 'js/pici_data_list.js' %}"></script>
   {% endblock %}
  
