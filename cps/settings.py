@@ -116,11 +116,11 @@ if select_sql == 2:
         'NAME': 'cps',
         'USER': 'sa',
         'PASSWORD': 'sa@123',
-        'HOST': '10.159.208.23',
+        'HOST': '10.159.208.18',
         'PORT': '1433',
         'OPTIONS': {
-            #'DRIVER': 'SQL Server Native Client 11.0',
-            'DRIVER': 'ODBC Driver 17 for SQL Server',
+            'DRIVER': 'SQL Server Native Client 11.0',
+            #'DRIVER': 'ODBC Driver 17 for SQL Server',
             'MARS_Connection': True,
         }
     }

@@ -4,12 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>批次报告</title>
     {% load static %}
-    
+    <link rel="stylesheet" href="{% static 'tables/jquery.dataTables.css'%}">
   </head>
   <!--导航栏-->
   {% block content %}
-  <style type="text/css">
-    table
+<style type="text/css">
+	 table
     {
         border-collapse: collapse;
         margin: 0 auto;
@@ -45,8 +45,13 @@
         <div class = "charts5" id="charts5"></div>
       </div>
       <div class="rightbox">
-        <div>
-          <table class="table_pici_data">
+        <div class="btn-group">
+          <button id="reload" class="searchBtn progress">刷新</button>
+          <button id="all" class="searchBtn all">全部</button>
+          <button id="total" class="searchBtn all">总量</button>
+        </div>
+        <div class ="table-group">
+          <table id ="datatables_1" class="table_pici_data">
             <tr>
               <th>批次号</th>
               <th>品牌</th>
@@ -72,5 +77,13 @@
   <script type="text/javascript" charset="utf8" src="{% static 'js/echarts.min.js' %}"></script>
   <script type="text/javascript" charset="utf8" src="{% static 'js/jquery.js' %}"></script>
   <script type="text/javascript" charset="utf8" src="{% static 'js/pici_data_list.js' %}"></script>
-  {% endblock %}
+  <script type="text/javascript" charset="utf8" src="{% static 'tables/jquery.dataTables.js' %}"></script>
+  <script>
+    $(document).ready(function () {
+        $('#datatables_1').DataTable({
+            stateSave: true,
+        });
+    });
+  </script>
+{% endblock %}
  
